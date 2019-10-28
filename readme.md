@@ -269,6 +269,16 @@ docker logs subtraction
 docker logs division
 ```
 
+_Cómo probarlo, una letra para la operación y números enteros_
+
+```
+operation: 
+m - multiplicación
+a - suma
+d - división num1 > num 2
+s - resta num1 > num 2
+```
+
 _Probar en postman el servicio composite, el expuesto_
 
 ```javascript
@@ -284,15 +294,6 @@ localhost:5000/mathOperations/:operation/:num1/:num2
 
 
 
-_Cómo probarlo, una letra para la operación y números enteros_
-
-```
-operation: 
-m - multiplicación
-a - suma
-d - división num1 > num 2
-s - resta num1 > num 2
-```
 
 _Validar que no se pueda entrar a los servicios que no son composite_
 
