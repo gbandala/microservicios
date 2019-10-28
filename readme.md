@@ -259,6 +259,11 @@ _Validar la red con los contenedores_
 docker network inspect domain.calculus
 ```
 
+![network](https://github.com/gbandala/microservicios/blob/master/imagenes/network.png)
+
+![domain](https://github.com/gbandala/microservicios/blob/master/imagenes/domain.png)
+
+
 _Probar si están encendidos los contenedores, debe mostrar mensajes en cada servidor_
 
 ```Dockerfile
