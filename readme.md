@@ -97,7 +97,7 @@ _Validado que funciona el servicio, se puede crear una imagen docker_
 
 _Crear Dockerfile_
 
-```javascript
+```Dockerfile
 FROM  node:9-slim
 RUN mkdir /src
 WORKDIR /src
@@ -128,13 +128,13 @@ serviciosuma
 
 _Crear Imagen Docker_
 
-```yml
+```Dockerfile
 docker build -t ms-addition .
 ```
 
 _Validar la Imagen Docker_
 
-```yml
+```Dockerfile
 docker images
 ```
 _Resumen para cada servicio_
@@ -174,7 +174,7 @@ Servicio-Composite
     docker-compose.yml
 ```
 
-```yml
+```Dockerfile
 version: '3'
 
 #Declarar los servicios
@@ -231,37 +231,37 @@ networks:
 
 _Crear la red domain.calculus, es decir personalizarla_
 
-```yml
+```Dockerfile
 docker network create domain.calculus
 ```
 
 _Validar la existencia de la nueva red_
 
-```yml
+```Dockerfile
 docker network ls
 ```
 
 _Crear los contenedores al correo yml_
 
-```yml
+```Dockerfile
 docker-compose up -d
 ```
 
 _Validar la creación_
 
-```yml
+```Dockerfile
 docker ps
 ```
 
 _Validar la red con los contenedores_
 
-```yml
+```Dockerfile
 docker network inspect domain.calculus
 ```
 
 _Probar si están encendidos los contenedores, debe mostrar mensajes en cada servidor_
 
-```yml
+```Dockerfile
 docker logs composite
 docker logs multiplication
 docker logs addition
