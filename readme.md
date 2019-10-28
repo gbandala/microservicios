@@ -274,7 +274,7 @@ _Probar en postman el servicio composite, el expuesto_
 ```javascript
 localhost:5000/mathOperations/:operation/:num1/:num2
 ```
-![composite a](https://github.com/gbandala/microservicios/blob/master/imagenes/composite.png)
+![composite a](https://github.com/gbandala/microservicios/blob/master/imagenes/composite%20a.png)
 
 
 
