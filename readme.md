@@ -53,13 +53,13 @@ _Un ejemplo sencillo de una operación suma, exponiendo una API, se le pasarán 
 
 _API get_
 
-```
+```javascript
 app.get('/mathOperations/addition/:num1/:num2',CalController.AdditionInq);
 ```
 
 _En el controller el archivo suma.js_
 
-```
+```javascript
 exports.AdditionInq = function (req, res) {....};
 ```
 _Resumen de cada servicio_
@@ -82,12 +82,12 @@ _Llamado a uno de los servicios de división, no hay localhost, porque crearemos
 
 _app.js_
 
-```
+```javascript
 app.get('/mathOperations/:operation/:num1/:num2', function (req, res) {...});
 
 ```
 
-```
+```javascript
 request('http://division:1000/mathOperations/division/' + num1 + '/' + num2, function (err, body) {....});
 ```
 
@@ -97,7 +97,7 @@ _Validado que funciona el servicio, se puede crear una imagen docker_
 
 _Crear Dockerfile_
 
-```
+```javascript
 FROM  node:9-slim
 RUN mkdir /src
 WORKDIR /src
@@ -128,12 +128,13 @@ serviciosuma
 
 _Crear Imagen Docker_
 
-```
+```yml
 docker build -t ms-addition .
 ```
+
 _Validar la Imagen Docker_
 
-```
+```yml
 docker images
 ```
 _Resumen para cada servicio_
@@ -173,7 +174,7 @@ Servicio-Composite
     docker-compose.yml
 ```
 
-```
+```yml
 version: '3'
 
 #Declarar los servicios
@@ -230,37 +231,37 @@ networks:
 
 _Crear la red domain.calculus, es decir personalizarla_
 
-```
+```yml
 docker network create domain.calculus
 ```
 
 _Validar la existencia de la nueva red_
 
-```
+```yml
 docker network ls
 ```
 
 _Crear los contenedores al correo yml_
 
-```
+```yml
 docker-compose up -d
 ```
 
 _Validar la creación_
 
-```
+```yml
 docker ps
 ```
 
 _Validar la red con los contenedores_
 
-```
+```yml
 docker network inspect domain.calculus
 ```
 
 _Probar si están encendidos los contenedores, debe mostrar mensajes en cada servidor_
 
-```
+```yml
 docker logs composite
 docker logs multiplication
 docker logs addition
@@ -270,7 +271,7 @@ docker logs division
 
 _Probar en postman el servicio composite, el expuesto_
 
-```
+```javascript
 localhost:5000/mathOperations/:operation/:num1/:num2
 ```
 
@@ -286,7 +287,7 @@ s - resta num1 > num 2
 
 _Validar que no se pueda entrar a los servicios que no son composite_
 
-```
+```javascript
 localhost:1000/mathOperations/addition/:num1/:num2
 localhost:1000/mathOperations/subtraction/:num1/:num2
 localhost:1000/mathOperations/multiplication/:num1/:num2
