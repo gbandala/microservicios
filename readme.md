@@ -253,6 +253,9 @@ _Validar la creación_
 docker ps
 ```
 
+![containers](https://github.com/gbandala/microservicios/blob/master/imagenes/containers.png)
+
+
 _Validar la red con los contenedores_
 
 ```Dockerfile
