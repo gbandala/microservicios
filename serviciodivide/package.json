@@ -1,0 +1,21 @@
+{
+  "name": "serviciodivide",
+  "version": "1.0.0",
+  "description": "servicio de division 2 parametros requeridos",
+  "main": "app.js",
+  "dependencies": {
+    "body-parser": "^1.19.0",
+    "express": "^4.17.1",
+    "nodemon": "^1.19.4"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "start":"nodemon app.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "divide"
+  ],
+  "author": "Gabriel Bandala",
+  "license": "ISC"
+}

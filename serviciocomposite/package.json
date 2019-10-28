@@ -1,0 +1,22 @@
+{
+  "name": "serviciocomposite",
+  "version": "1.0.0",
+  "description": "servicio orquestador calculadora, llama a otros sevicios",
+  "main": "composite.js",
+  "dependencies": {
+    "body-parser": "^1.19.0",
+    "express": "^4.17.1",
+    "nodemon": "^1.19.4",
+    "request": "^2.88.0"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "start":"nodemon app.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "composite"
+  ],
+  "author": "Gabriel Bandala",
+  "license": "ISC"
+}
