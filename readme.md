@@ -62,15 +62,16 @@ _En el controller el archivo suma.js_
 ```
 exports.AdditionInq = function (req, res) {....};
 ```
+_Resumen de cada servicio_
 
-> Crear el código de controller
-> Crear el código del api e invocar el controller
-> Instalar las librerías eje. npm install express body-parser
-> Hacer el npm init para documentar el servicio
-> Editar el package.json en la línea script: "start":"nodemon app.js"
-> Ejecutar eje. node app.js y en su defecto corregir errores
-> Validar en postman la URL con los parámetros eje localhost: 1000/...
-> Validar logs en el servidor de la ejecución
+> * Crear el código de controller
+> * Crear el código del api e invocar el controller
+> * Instalar las librerías eje. npm install express body-parser
+> * Hacer el npm init para documentar el servicio
+> * Editar el package.json en la línea script: "start":"nodemon app.js"
+> * Ejecutar eje. node app.js y en su defecto corregir errores
+> * Validar en postman la URL con los parámetros eje localhost: 1000/...
+> * Validar logs en el servidor de la ejecución
 
 
 ### Crear el servicio composite ⚙️
