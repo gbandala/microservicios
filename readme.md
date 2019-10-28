@@ -307,6 +307,10 @@ subtraction:1000/mathOperations/subtraction/:num1/:num2
 multiplication:1000/mathOperations/multiplication/:num1/:num2
 division:1000/mathOperations/division/:num1/:num2
 ```
+![composite a](https://github.com/gbandala/microservicios/blob/master/imagenes/division.png)
+
+![composite a](https://github.com/gbandala/microservicios/blob/master/imagenes/suma.png)
+
 
 ## Autor ✒️
 
