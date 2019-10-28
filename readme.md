@@ -138,11 +138,11 @@ docker images
 ```
 _Resumen para cada servicio_
 
-> Validar en postman que funciona el servicio
-> Crear el Dockerfile y .dockerignore
-> Crear la imagen y validarla
-> Hacer el npm init para documentar el servicio
-> La única estrutura diferente es la del serviciocomposite sin controller
+> * Validar en postman que funciona el servicio
+> * Crear el Dockerfile y .dockerignore
+> * Crear la imagen y validarla
+> * Hacer el npm init para documentar el servicio
+> * La única estrutura diferente es la del serviciocomposite sin controller
 
 ### Orquestar los servicios 🔩
 
@@ -150,16 +150,16 @@ _Una vez creadas las imagenes con los servicios validados, los vamos a orquestar
 
 _Resumen_
 
-> Crear la red domain.calculus
-> Crear el docker-compose.yml, instrucciones de armado de los contenedores
-> Corer el docker-compose.yml
-> Validar la existencia de la red domain.calculus
-> Validar la existencia de los contenedores
-> Validar los logs de cada contenedor si están encendidos
-> Validar en Postman el puerto expuesto (Dockerfile) de composite
-> Solo el composite está expuesto
-> Validar que no tienen accesos a los otros servicios
-> Revisar los logs después de cada operación de los contenedores involucrados
+> * Crear la red domain.calculus
+> * Crear el docker-compose.yml, instrucciones de armado de los contenedores
+> * Corer el docker-compose.yml
+> * Validar la existencia de la red domain.calculus
+> * Validar la existencia de los contenedores
+> * Validar los logs de cada contenedor si están encendidos
+> * Validar en Postman el puerto expuesto (Dockerfile) de composite
+> * Solo el composite está expuesto
+> * Validar que no tienen accesos a los otros servicios
+> * Revisar los logs después de cada operación de los contenedores involucrados
 
 _Crear docker-compose.yml al nivel del proyecto_
 
