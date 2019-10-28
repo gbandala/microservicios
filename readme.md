@@ -174,7 +174,7 @@ Servicio-Composite
     docker-compose.yml
 ```
 
-```Dockerfile
+```yml
 version: '3'
 
 #Declarar los servicios
