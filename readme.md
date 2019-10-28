@@ -276,6 +276,12 @@ localhost:5000/mathOperations/:operation/:num1/:num2
 ```
 ![composite a](https://github.com/gbandala/microservicios/blob/master/imagenes/composite%20a.png)
 
+![composite a](https://github.com/gbandala/microservicios/blob/master/imagenes/composite%20d.png)
+
+![composite a](https://github.com/gbandala/microservicios/blob/master/imagenes/composite%20m.png)
+
+![composite a](https://github.com/gbandala/microservicios/blob/master/imagenes/composite%20s.png)
+
 
 
 _Cómo probarlo, una letra para la operación y números enteros_
