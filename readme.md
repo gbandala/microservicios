@@ -269,6 +269,12 @@ docker logs subtraction
 docker logs division
 ```
 
+![composite log](https://github.com/gbandala/microservicios/blob/master/imagenes/composite_log.png)
+
+![addition log](https://github.com/gbandala/microservicios/blob/master/imagenes/addition_log.png)
+
+
+
 _Cómo probarlo, una letra para la operación y números enteros_
 
 ```
@@ -286,11 +292,11 @@ localhost:5000/mathOperations/:operation/:num1/:num2
 ```
 ![composite a](https://github.com/gbandala/microservicios/blob/master/imagenes/composite%20a.png)
 
-![composite a](https://github.com/gbandala/microservicios/blob/master/imagenes/composite%20d.png)
+![composite d](https://github.com/gbandala/microservicios/blob/master/imagenes/composite%20d.png)
 
-![composite a](https://github.com/gbandala/microservicios/blob/master/imagenes/composite%20m.png)
+![composite m](https://github.com/gbandala/microservicios/blob/master/imagenes/composite%20m.png)
 
-![composite a](https://github.com/gbandala/microservicios/blob/master/imagenes/composite%20s.png)
+![composite s](https://github.com/gbandala/microservicios/blob/master/imagenes/composite%20s.png)
 
 
 
