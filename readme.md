@@ -89,14 +89,17 @@ app.get('/mathOperations/:operation/:num1/:num2', function (req, res) {...});
 
 ```javascript
 request('http://division:4000/mathOperations/division/' + num1 + '/' + num2, function (err, body) {....});
-// para probar el composite sera necesario hacer cambios en la URL de nombre del server a localhost y un puerto para cada operacion
+// para probar el composite sera necesario hacer cambios en la URL de nombre del server a localhost 
+//y un puerto para cada operacion
 request('http://localhost:1000/mathOperations/addition/' + num1 + '/' + num2, function (err, body) {....});
 request('http://localhost:2000/mathOperations/subtraction/' + num1 + '/' + num2, function (err, body) {....});
 request('http://localhost:3000/mathOperations/multiplication/' + num1 + '/' + num2, function (err, body) {....});
 request('http://localhost:4000/mathOperations/division/' + num1 + '/' + num2, function (err, body) {....});
 
 //iniciar cada servicio (las 4 operaciones) y el orquestador
-//despues de probar el local regresar los valores, en el codigo esta el app2.js en el composite para no hacer estos cambios, pero sera necesario ejecutar node app2.js en la ruta del servicio composite
+//despues de probar el local regresar los valores, en el codigo esta el app2.js 
+//en el composite para no hacer estos cambios, pero sera necesario ejecutar node app2.js 
+//en la ruta del servicio composite
 
 ```
 
@@ -189,7 +192,8 @@ version: '3'
 
 #Declarar los servicios
 #Cada servicio con la imagen ya creada
-#expose para comunicacion interna (este puerto debe ser el mismo que se declaro en cada api llamada dentro del app del composite) y ports para exponer al exterior
+#expose para comunicacion interna (este puerto debe ser el mismo que se declaro en cada 
+#api llamada dentro del app del composite) y ports para exponer al exterior
 #depends_on para ligar conexion entre contenedores
 #Crear la red domain.calculus antes de ligarlos
 #networks para agrupar los contenedores y solo se comuniquen entre esa red
