@@ -97,9 +97,9 @@ request('http://localhost:3000/mathOperations/multiplication/' + num1 + '/' + nu
 request('http://localhost:4000/mathOperations/division/' + num1 + '/' + num2, function (err, body) {....});
 
 //iniciar cada servicio (las 4 operaciones) y el orquestador
-//despues de probar el local regresar los valores, en el codigo esta el app2.js 
-//en el composite para no hacer estos cambios, pero sera necesario ejecutar node app2.js 
-//en la ruta del servicio composite
+//despues de probar el local regresar los valores en el app.js del composite
+//para no hacer estos cambios, pero sera necesario ejecutar node app2.js del composite
+
 
 ```
 
