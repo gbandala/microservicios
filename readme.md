@@ -67,8 +67,8 @@ _Resumen de cada servicio_
 > * Crear el código de controller
 > * Crear el código del api e invocar el controller
 > * Instalar las librerías eje. npm install express body-parser
-> * Hacer el npm init para documentar el servicio
-> * Editar el package.json en la línea script: "start":"nodemon app.js"
+> * Hacer el npm init para documentar cada servicio
+> * Editar el package.json en la línea script: "start":"node app.js"
 > * Ejecutar eje. node app.js y en su defecto corregir errores
 > * Validar en postman la URL con los parámetros eje localhost: 1000/...
 > * Validar logs en el servidor de la ejecución
@@ -88,7 +88,16 @@ app.get('/mathOperations/:operation/:num1/:num2', function (req, res) {...});
 ```
 
 ```javascript
-request('http://division:1000/mathOperations/division/' + num1 + '/' + num2, function (err, body) {....});
+request('http://division:4000/mathOperations/division/' + num1 + '/' + num2, function (err, body) {....});
+// para probar el composite sera necesario hacer cambios en la URL de nombre del server a localhost y un puerto para cada operacion
+request('http://localhost:1000/mathOperations/addition/' + num1 + '/' + num2, function (err, body) {....});
+request('http://localhost:2000/mathOperations/subtraction/' + num1 + '/' + num2, function (err, body) {....});
+request('http://localhost:3000/mathOperations/multiplication/' + num1 + '/' + num2, function (err, body) {....});
+request('http://localhost:4000/mathOperations/division/' + num1 + '/' + num2, function (err, body) {....});
+
+//iniciar cada servicio (las 4 operaciones) y el orquestador
+//despues de probar el local regresar los valores, en el codigo esta el app2.js en el composite para no hacer estos cambios, pero sera necesario ejecutar node app2.js en la ruta del servicio composite
+
 ```
 
 ## Crear la imagen del servicio suma ⚙️
@@ -140,6 +149,7 @@ docker images
 _Resumen para cada servicio_
 
 > * Validar en postman que funciona el servicio
+> * Para probar el composite ejecutar el app2.js del código
 > * Crear el Dockerfile y .dockerignore
 > * Crear la imagen y validarla
 > * Hacer el npm init para documentar el servicio
@@ -153,7 +163,7 @@ _Resumen_
 
 > * Crear la red domain.calculus
 > * Crear el docker-compose.yml, instrucciones de armado de los contenedores
-> * Corer el docker-compose.yml
+> * Correr el docker-compose.yml
 > * Validar la existencia de la red domain.calculus
 > * Validar la existencia de los contenedores
 > * Validar los logs de cada contenedor si están encendidos
@@ -179,25 +189,11 @@ version: '3'
 
 #Declarar los servicios
 #Cada servicio con la imagen ya creada
-#expose para comunicacion interna y ports para exponer al exterior
+#expose para comunicacion interna (este puerto debe ser el mismo que se declaro en cada api llamada dentro del app del composite) y ports para exponer al exterior
 #depends_on para ligar conexion entre contenedores
 #Crear la red domain.calculus antes de ligarlos
 #networks para agrupar los contenedores y solo se comuniquen entre esa red
 services:
-  multiplication:
-    container_name: multiplication
-    image: ms-multiplication
-    expose:
-      - '1000'
-    networks:
-      - domain.calculus      
-  division:
-    container_name: division
-    image: ms-division
-    expose:
-      - '1000'
-    networks:
-      - domain.calculus      
   addition:
     container_name: addition
     image: ms-addition
@@ -209,9 +205,23 @@ services:
     container_name: subtraction
     image: ms-subtraction
     expose:
-      - '1000'    
+      - '2000'    
     networks:
       - domain.calculus                    
+  multiplication:
+    container_name: multiplication
+    image: ms-multiplication
+    expose:
+      - '3000'
+    networks:
+      - domain.calculus      
+  division:
+    container_name: division
+    image: ms-division
+    expose:
+      - '4000'
+    networks:
+      - domain.calculus      
   composite:
     container_name: composite
     image:  ms-composite
@@ -313,19 +323,15 @@ _Validar que no se pueda entrar a los servicios que no son composite_
 
 ```javascript
 localhost:1000/mathOperations/addition/:num1/:num2
-localhost:1000/mathOperations/subtraction/:num1/:num2
-localhost:1000/mathOperations/multiplication/:num1/:num2
-localhost:1000/mathOperations/division/:num1/:num2
+localhost:2000/mathOperations/subtraction/:num1/:num2
+localhost:3000/mathOperations/multiplication/:num1/:num2
+localhost:4000/mathOperations/division/:num1/:num2
 
 addition:1000/mathOperations/addition/:num1/:num2
-subtraction:1000/mathOperations/subtraction/:num1/:num2
-multiplication:1000/mathOperations/multiplication/:num1/:num2
-division:1000/mathOperations/division/:num1/:num2
+subtraction:2000/mathOperations/subtraction/:num1/:num2
+multiplication:3000/mathOperations/multiplication/:num1/:num2
+division:4000/mathOperations/division/:num1/:num2
 ```
-![composite a](https://github.com/gbandala/microservicios/blob/master/imagenes/division.png)
-
-![composite a](https://github.com/gbandala/microservicios/blob/master/imagenes/suma.png)
-
 
 
 ## Referencias utiles para el diseño de Microservicios 🛠️

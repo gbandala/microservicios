@@ -15,7 +15,7 @@ const CalController = require('./controllers/resta');
 //----------------------------------------------------------------------------------------
 //2.-Configurar web server y parsee los datos
 const app = express();
-const port = 1000;
+const port = 2000;
 app.use(bodyParser.json());
 
 
@@ -28,7 +28,7 @@ app.get('/mathOperations/subtraction/:num1/:num2', CalController.SubtractionInq)
 //----------------------------------------------------------------------------------------
 //4.- Encender webserver 
 app.listen(port, () => {
-  console.log('Server Inicializado en el puerto.... ');
+  console.log('Server subtraction Inicializado en el puerto: ' + port);
 
 });
   //----------------------------------------------------------------------------------------

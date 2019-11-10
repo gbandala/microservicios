@@ -52,7 +52,7 @@ app.get('/mathOperations/:operation/:num1/:num2', function (req, res) {
             });
           break;
         case "s":
-            request('http://subtraction:1000/mathOperations/subtraction/' + num1 + '/' + num2, function (err, body) {
+            request('http://subtraction:2000/mathOperations/subtraction/' + num1 + '/' + num2, function (err, body) {
               if (err) { return console.log(err); }
               result.Salidas.Resultado=body.body;
               console.log(result);
@@ -62,7 +62,7 @@ app.get('/mathOperations/:operation/:num1/:num2', function (req, res) {
             });
           break;
         case "m":
-          request('http://multiplication:1000/mathOperations/multiplication/' + num1 + '/' + num2, function (err, body) {
+          request('http://multiplication:3000/mathOperations/multiplication/' + num1 + '/' + num2, function (err, body) {
             if (err) { return console.log(err); }
             result.Salidas.Resultado=body.body;
             console.log(result);
@@ -72,7 +72,7 @@ app.get('/mathOperations/:operation/:num1/:num2', function (req, res) {
           });
           break;
         case "d":
-            request('http://division:1000/mathOperations/division/' + num1 + '/' + num2, function (err, body) {
+            request('http://division:4000/mathOperations/division/' + num1 + '/' + num2, function (err, body) {
               if (err) { return console.log(err); }
               result.Salidas.Resultado=body.body;
               console.log(result);

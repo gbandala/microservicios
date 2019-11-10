@@ -12,7 +12,7 @@ const CalController = require('./controllers/divide');
 //----------------------------------------------------------------------------------------
 //2.-Configurar web server y parsee los datos
 const app = express();
-const port = 1000;
+const port = 4000;
 app.use(bodyParser.json());
 
 
@@ -24,7 +24,7 @@ app.get('/mathOperations/division/:num1/:num2', CalController.DivisionInq);
 //----------------------------------------------------------------------------------------
 //4.- Encender webserver 
 app.listen(port, () => {
-  console.log('Server Inicializado en el puerto: ' + port);
+  console.log('Server division Inicializado en el puerto: ' + port);
 
 });
   //----------------------------------------------------------------------------------------

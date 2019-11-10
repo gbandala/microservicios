@@ -15,7 +15,7 @@ const CalController = require('./controllers/multiplica');
 //----------------------------------------------------------------------------------------
 //2.-Configurar web server y parsee los datos
 const app = express();
-const port = 1000;
+const port = 3000;
 app.use(bodyParser.json());
 
 
@@ -26,7 +26,7 @@ app.get('/mathOperations/multiplication/:num1/:num2', CalController.Multiplicati
 //----------------------------------------------------------------------------------------
 //4.- Encender webserver 
 app.listen(port, () => {
-  console.log('Servicio de multiplicacion inicializado en el puerto: ' + port);
+  console.log('Server multiplication inicializado en el puerto: ' + port);
 
 });
   //----------------------------------------------------------------------------------------

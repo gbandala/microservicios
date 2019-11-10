@@ -2,25 +2,11 @@ version: '3'
 
 #Declarar los servicios
 #Cada servicio con la imagen ya creada
-#expose para comunicacion interna y ports para exponer al exterior
+#expose para comunicacion interna (este puerto debe ser el mismo que se declaro en cada api llamada dentro del app del composite) y ports para exponer al exterior
 #depends_on para ligar conexion entre contenedores
 #Crear la red domain.calculus antes de ligarlos
 #networks para agrupar los contenedores y solo se comuniquen entre esa red
 services:
-  multiplication:
-    container_name: multiplication
-    image: ms-multiplication
-    expose:
-      - '1000'
-    networks:
-      - domain.calculus      
-  division:
-    container_name: division
-    image: ms-division
-    expose:
-      - '1000'
-    networks:
-      - domain.calculus      
   addition:
     container_name: addition
     image: ms-addition
@@ -32,9 +18,23 @@ services:
     container_name: subtraction
     image: ms-subtraction
     expose:
-      - '1000'    
+      - '2000'    
     networks:
       - domain.calculus                    
+  multiplication:
+    container_name: multiplication
+    image: ms-multiplication
+    expose:
+      - '3000'
+    networks:
+      - domain.calculus      
+  division:
+    container_name: division
+    image: ms-division
+    expose:
+      - '4000'
+    networks:
+      - domain.calculus      
   composite:
     container_name: composite
     image:  ms-composite
