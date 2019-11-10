@@ -267,19 +267,11 @@ _Validar la creación_
 docker ps
 ```
 
-![containers](https://github.com/gbandala/microservicios/blob/master/imagenes/containers.png)
-
-
 _Validar la red con los contenedores_
 
 ```Dockerfile
 docker network inspect domain.calculus
 ```
-
-![network](https://github.com/gbandala/microservicios/blob/master/imagenes/network.png)
-
-![domain](https://github.com/gbandala/microservicios/blob/master/imagenes/domain.png)
-
 
 _Probar si están encendidos los contenedores, debe mostrar mensajes en cada servidor_
 
@@ -290,12 +282,6 @@ docker logs addition
 docker logs subtraction
 docker logs division
 ```
-
-![composite log](https://github.com/gbandala/microservicios/blob/master/imagenes/composite_log.png)
-
-![addition log](https://github.com/gbandala/microservicios/blob/master/imagenes/addition_log.png)
-
-
 
 _Cómo probarlo, una letra para la operación y números enteros_
 
@@ -312,16 +298,6 @@ _Probar en postman el servicio composite, el expuesto_
 ```javascript
 localhost:5000/mathOperations/:operation/:num1/:num2
 ```
-![composite a](https://github.com/gbandala/microservicios/blob/master/imagenes/composite%20a.png)
-
-![composite d](https://github.com/gbandala/microservicios/blob/master/imagenes/composite%20d.png)
-
-![composite m](https://github.com/gbandala/microservicios/blob/master/imagenes/composite%20m.png)
-
-![composite s](https://github.com/gbandala/microservicios/blob/master/imagenes/composite%20s.png)
-
-
-
 
 _Validar que no se pueda entrar a los servicios que no son composite_
 
